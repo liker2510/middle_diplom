@@ -1,5 +1,5 @@
-import phone from "./modules/phone";
+import smootScroll from "./modules/smootScroll";
 import popup from "./modules/popup";
 
-phone();
+smootScroll();
 popup();

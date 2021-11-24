@@ -1663,6 +1663,10 @@ input.error {
   right: 25px;
   bottom: 25px;
   transform: rotate(90deg);
+  display: none;
+}
+.smooth-scroll-active {
+  display: block !important;
 }
 
 @media (min-width: 576px) {
