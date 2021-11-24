@@ -1,0 +1,1 @@
+(()=>{"use strict";(()=>{const e=document.querySelector(".header-modal--opened");document.querySelector(".button").addEventListener("click",(t=>{t.preventDefault(),e.classList.remove("header-modal")})),e.addEventListener("click",(t=>{t.target.classList.contains("header-modal__close")&&(console.log("Работает"),e.classList.add("header-modal"))}))})()})();
