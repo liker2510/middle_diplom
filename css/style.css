@@ -1666,7 +1666,7 @@ input.error {
   display: none;
 }
 .smooth-scroll-active {
-  display: block !important;
+  display: block;
 }
 
 @media (min-width: 576px) {
