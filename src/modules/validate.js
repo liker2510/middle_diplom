@@ -1,6 +1,6 @@
 const vaidate = () => {
-   
-    window.addEventListener('DOMContentLoaded', function() {
+
+    window.addEventListener('DOMContentLoaded', function(e) {
         const inputs = document.querySelectorAll('input[name=phone]');
       
         Array.prototype.forEach.call(inputs, function(input) {
@@ -83,6 +83,12 @@ const vaidate = () => {
       InputMask.prototype.isElement = function(element) {
           return element instanceof Element || element instanceof HTMLDocument;
       }
+
+      document.body.addEventListener('input', (e) => {
+        if (e.target.name === "fio") {
+            e.target.value = e.target.value.replace(/[^а-яА-Яa-zA-Z\s]+/, '');
+        }
+    })
 }
 
 export default vaidate
