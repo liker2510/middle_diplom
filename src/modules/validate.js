@@ -88,6 +88,9 @@ const vaidate = () => {
         if (e.target.name === "fio") {
             e.target.value = e.target.value.replace(/[^а-яА-Яa-zA-Z\s]+/, '');
         }
+        if (e.target.name === "calc-input") {
+            e.target.value = e.target.value.replace(/[^0-9]+/, '');
+        }
     })
 }
 

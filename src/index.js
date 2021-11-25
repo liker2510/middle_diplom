@@ -13,8 +13,20 @@ popupPhoto();
 calc();
 timer('03 december 2021');
 sendForm({
-    formId: 'form1'
+    formId: 'form1',
+    someElem: [
+        {
+            type: 'number',
+            id: 'calc-total'
+        }
+    ]
 });
 sendForm({
-    formId: 'form2'
+    formId: 'form2',
+    someElem: [
+        {
+            type: 'number',
+            id: 'calc-total'
+        }
+    ]
 });
