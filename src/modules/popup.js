@@ -4,7 +4,6 @@ const popup = () => {
     const servicesModalOpened = document.querySelector('.services-modal--opened');
 
     document.body.addEventListener('click', (e) => {
-        // e.preventDefault();
         if (e.target.matches('.button>a')) {
             headerModalOpened.classList.remove('header-modal');
             overlay.style = 'display: block';
