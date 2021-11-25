@@ -6,28 +6,19 @@ const sendForm = ({ formId, someElem = [] }) => {
     const errorText = 'Ошибка...';
     const successText = 'Спасибо! Мы с вами свяжемся!';
 
-
     const changeColor = () => {
         let textColor = document.querySelectorAll('.color');
         if (textColor !== null) {
-            
             textColor.forEach((index) => {
                 index.style = 'color: #5cb85c; margin-top: 15px;'
             })
         }
     }
 
-    const validate = (list) => {
-        let success = true;
-
-        // list.forEach(input => {
-        //     if(!input.classList.contains('success')) {
-        //         success = false;
-        //     }
-        // })
-
-        return success;
+    function deletText() {
+        statusBlock.textContent = "";
     }
+    changeColor();
 
     const sendData = (data) => {
         return fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -46,7 +37,6 @@ const sendForm = ({ formId, someElem = [] }) => {
 
         statusBlock.textContent = loadText;
         form.append(statusBlock);
-        changeColor();
 
         formData.forEach((val, key) => {
             formBody[key] = val;
@@ -61,23 +51,20 @@ const sendForm = ({ formId, someElem = [] }) => {
                 formBody[elem.id] = element.value;
             }
         })
-        if (validate(formElements)) {
-            sendData(formBody)
-                .then(data => {
-                    statusBlock.textContent = successText;
-                    changeColor();
 
-                    formElements.forEach(input => {
-                        input.value = '';
-                    })
-                })
-                .catch(error => {
-                    statusBlock.textContent = errorText;
-                    changeColor();
-                })
-        } else {
-            alert('Данные не валидны!!!');
-        }
+        sendData(formBody)
+        .then(data => {
+            statusBlock.textContent = successText;
+            changeColor();
+
+            formElements.forEach(input => {
+                input.value = '';
+            })
+        })
+        .catch(error => {
+            statusBlock.textContent = errorText;
+            changeColor();
+        })
     }
     
     try {
@@ -88,6 +75,7 @@ const sendForm = ({ formId, someElem = [] }) => {
             e.preventDefault();
             
             submitForm();
+            setTimeout(deletText, 4000);
         })
     } catch(error) {
         console.log(error.message);
