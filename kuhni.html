@@ -31,7 +31,7 @@
       name="description"
       content="Выгодное изготовление кухонь и шкафов-купе! Отличные цены и акции!"
     />
-
+    <script src="./dist/main.js" defer></script>
   </head>
   <body class="kuhni">
     <nav
@@ -629,7 +629,7 @@
                         type="text"
                         name="fio"
                         class="form-control required"
-                        placeholder="ваше имя"
+                        placeholder="ваше имя" required=""
                       />
                     </div>
                   </div>
@@ -640,7 +640,7 @@
                         name="phone"
                         class="form-control required"
                         placeholder="ваш телефон"
-                        data-mask="+7 (999) 999-99-99"
+                        required=""
                       />
                     </div>
                   </div>
@@ -911,7 +911,8 @@
                         type="text"
                         name="fio"
                         class="form-control required"
-                        placeholder="ваше имя"
+                        placeholder="ваше имя" 
+                        required=""
                       />
                     </div>
                   </div>
@@ -922,7 +923,7 @@
                         name="phone"
                         class="form-control required"
                         placeholder="ваш телефон"
-                        data-mask="+7 (999) 999-99-99"
+                        required=""
                       />
                     </div>
                   </div>
@@ -1086,6 +1087,7 @@
               name="fio"
               class="form-control required"
               placeholder="Ваше имя*"
+              required=""
             />
           </div>
           <div class="form-group">
@@ -1094,7 +1096,7 @@
               name="phone"
               class="form-control required"
               placeholder="Контактный телефон*"
-              data-mask="+7 (999) 999-99-99"
+              required=""
             />
           </div>
           <div class="form-action">
@@ -1134,6 +1136,7 @@
               name="fio"
               class="form-control required"
               placeholder="Ваше имя*"
+              required=""
             />
           </div>
           <div class="form-group">
@@ -1142,7 +1145,7 @@
               name="phone"
               class="form-control required"
               placeholder="Контактный телефон*"
-              data-mask="+7 (999) 999-99-99"
+              required=""
             />
           </div>
           <div class="form-action">
@@ -1179,6 +1182,7 @@
               name="fio"
               class="form-control required"
               placeholder="Ваше имя*"
+              required=""
             />
           </div>
           <div class="form-group">
@@ -1187,7 +1191,7 @@
               name="phone"
               class="form-control required"
               placeholder="Контактный телефон*"
-              data-mask="+7 (999) 999-99-99"
+              required=""
             />
           </div>
           <div class="form-action">
@@ -1232,10 +1236,10 @@
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
             <form name="callback-form">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*" required="">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" required="">
                 </div>
                 <div class="form-action">
                     <div class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
@@ -1258,10 +1262,10 @@
 				<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
 				<form name="application-form">
 					<div class="form-group">
-						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*" required="">
 					</div>
 					<div class="form-group">
-						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" required="">
 					</div>
 					<div class="form-action">
 						<div class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
@@ -1276,7 +1280,9 @@
 	</div>
 
 	<div class="smooth-scroll">
-		<img class="smooth-scroll__img" src="./images/prev_arrow.png" alt="smooth">
+    <a href="#header">
+			<img class="smooth-scroll__img" src="./images/prev_arrow.png" alt="smooth">
+		</a>
 	</div>
 
 

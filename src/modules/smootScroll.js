@@ -2,7 +2,7 @@ const smootScroll = () => {
     'use strict';
     const smoothLinks = document.querySelectorAll('a[href^="#"]');
     const smoothScroll = document.querySelector('.smooth-scroll');
-    
+    console.log(smoothScroll);
     window.addEventListener('scroll', trackScroll);
 
     function trackScroll() {
