@@ -1,5 +1,6 @@
 const sendForm = ({ formId, someElem = [] }) => {
     const form = document.getElementById(formId);
+    const calc = document.getElementById('calc');
     const statusBlock = document.createElement('div');
     statusBlock.classList.add('color')
     const loadText = 'Загрузка...';
@@ -42,13 +43,15 @@ const sendForm = ({ formId, someElem = [] }) => {
             formBody[key] = val;
         })
 
-        someElem.forEach(elem => {
-            const element = document.getElementById(elem.id);
-
-            if (elem.type === 'number' && element.value !== 0 && element.value !== "") {
-                formBody[elem.id] = element.value;
-            }
-        })
+        if (calc !== null) {
+            someElem.forEach(elem => {
+                const element = document.getElementById(elem.id);
+    
+                if (elem.type === 'number' && element.value !== 0 && element.value !== "") {
+                    formBody[elem.id] = element.value;
+                }
+            })
+        }
 
         sendData(formBody)
         .then(data => {
