@@ -1297,6 +1297,9 @@ p.services-image_mobile {
     margin: 7px 10px 0px;
     border-radius: 50px;
   }
+  .service-block {
+    margin: 30px 20px 0px 20px;
+  }
 }
 @media (max-width: 767px) {
   #benefits .col-md-4:last-child .benefit-title {
