@@ -5,6 +5,7 @@ import sendForm from "./modules/sendForm";
 import popupPhoto from "./modules/popupPhoto";
 import timer from "./modules/timer";
 import calc from "./modules/calс";
+import slider from "./modules/slider";
 
 smootScroll();
 popup();
@@ -12,6 +13,7 @@ vaidate();
 popupPhoto();
 calc();
 timer('03 december 2021');
+slider();
 sendForm({
     formId: 'form1',
     someElem: [

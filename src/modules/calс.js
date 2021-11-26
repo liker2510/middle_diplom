@@ -30,13 +30,14 @@ const calc = () => {
             }
           });
     }
-    
-    calcBlock.addEventListener('input', (e) => {
+    if (calcBlock !== null) {
+        calcBlock.addEventListener('input', (e) => {
+            if (e.target === calcType || e.target === calcMaterial || e.target === calcSquare) {
+                countCalc();
+            }
+        })
+    }
 
-        if (e.target === calcType || e.target === calcMaterial || e.target === calcSquare) {
-            countCalc();
-        }
-    })
 }
 
 export default calc;
