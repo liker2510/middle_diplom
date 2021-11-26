@@ -542,7 +542,7 @@ input.error {
   margin: 30px 20px 30px;
 }
 .service-block-active {
-  display: block;
+  display: block !important;
 }
 .service-image img {
   border-top-left-radius: 10px;
