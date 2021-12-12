@@ -12,7 +12,7 @@ popup();
 vaidate();
 popupPhoto();
 calc();
-timer('03 december 2021');
+timer('31 december 2021');
 slider();
 sendForm({
     formId: 'form1',
